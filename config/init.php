@@ -1,9 +1,14 @@
 <?php
+// Start Session
+session_start(); 
 
 /* 
 ** Config File: where hold on all database parameters 
 */
 require_once 'config.php';
+
+// Include Helpers
+require_once 'helpers/system_helper.php';
 
 /*
 ** Autoloader: to not include manualy every class
