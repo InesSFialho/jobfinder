@@ -8,6 +8,13 @@
     <li class="list-group-item"><strong>Salary:</strong> <?php echo $job->salary; ?></li>
     <li class="list-group-item"><strong>Contact Email:</strong> <?php echo $job->contact_email; ?></li>
 </ul>
-<br><br>
-<a href="index.php">Go Back</a>
+<br>
+<div class="float-right d-flex">
+    <a class="btn btn-secondary btn-sm mr-2" href="edit.php?id=<?php echo $job->id; ?>">Edit</a>
+    <form action="job.php" method="post">
+        <input type="hidden" name="del_id" value="<?php echo $job->id; ?>">
+        <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+    </form>
+</div>
+<br><a href="index.php">Go Back</a><br><br>
 <?php include 'inc/footer.php'; ?>
